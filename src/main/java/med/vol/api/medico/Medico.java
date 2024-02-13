@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.vol.api.endereco.Endereco;
 @Table(name = "medicos")
-@Entity(name = "Mecido")
+@Entity(name = "Medico")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,13 +18,21 @@ public class Medico {
     private Long id;
     private String nome;
     private String email;
+    private String telefone;
     private String crm;
+
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
 
-    //Embeddable Attribute - JPA
     @Embedded
-    private Endereco endereco;
+    private Endereco endereco; // Embeddable Attribute - JPA
 
-    // Classes DAO - Data Access Object
+    public Medico(DadosCadastroMedico dadosMedico) {
+        this.nome = dadosMedico.nome();
+        this.email = dadosMedico.email();
+        this.telefone = dadosMedico.telefone();
+        this.especialidade = dadosMedico.especialidade();
+        this.crm = dadosMedico.crm();
+        this.endereco = new Endereco(dadosMedico.endereco());
+    }
 }
