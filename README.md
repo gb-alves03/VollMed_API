@@ -8,6 +8,7 @@ Framework: Spring Boot, para desenvolvimento rápido e eficiente.
 Persistência de Dados: MySQL, para armazenamento seguro e gerenciamento eficaz.
 Ferramentas de Migração de Banco de Dados: Flyway Migration, para controle preciso da evolução do esquema do banco de dados.
 DTOs (Data Transfer Objects): Utilizados para representar os dados que são recebidos e devolvidos pela API, garantindo uma comunicação clara e eficiente entre diferentes camadas da aplicação.
+
 📌 Principais Funcionalidades:
 
 Implementação de Regras de Negócio: Respeitamos e seguimos rigorosamente as regras de negócio estabelecidas para a gestão da clínica médica, garantindo a integridade e consistência dos dados.
