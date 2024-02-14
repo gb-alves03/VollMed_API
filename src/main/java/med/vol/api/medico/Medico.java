@@ -27,12 +27,31 @@ public class Medico {
     @Embedded
     private Endereco endereco; // Embeddable Attribute - JPA
 
+    private boolean ativo;
+
     public Medico(DadosCadastroMedico dadosMedico) {
+        this.ativo = true;
         this.nome = dadosMedico.nome();
         this.email = dadosMedico.email();
         this.telefone = dadosMedico.telefone();
         this.especialidade = dadosMedico.especialidade();
         this.crm = dadosMedico.crm();
         this.endereco = new Endereco(dadosMedico.endereco());
+    }
+
+    public void atualizarInformacoes(DadosAtualizarMedico dados) {
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.telefone() != null) {
+            this.telefone = dados.telefone();
+        }
+        if (dados.endereco() != null) {
+            this.endereco.atualizarInformacoes(dados.endereco());
+        }
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 }
