@@ -14,3 +14,21 @@ DTOs (Data Transfer Objects): Utilizados para representar os dados que são rece
 -  Implementação de Regras de Negócio: Foram respeitadas e seguidas rigorosamente as regras de negócio estabelecidas para a gestão da clínica médica, garantindo a integridade e consistência dos dados.
 -  Cadastro de Médicos e Pacientes: Foram desenvolvidos endpoints robustos para o cadastro completo de médicos e pacientes, em conformidade com as regras de negócio definidas.
 -  Listagem, Agendamento e Cancelamento de Consultas: Foram implementadas funcionalidades para listar, agendar e cancelar consultas, respeitando todas as restrições e requisitos estabelecidos pelas regras de negócio.
+
+## 🛠 Tecnologias
+
+As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
+
+- **[Java 17](https://www.oracle.com/java)**
+- **[Spring Boot 3](https://spring.io/projects/spring-boot)**
+- **[Maven](https://maven.apache.org)**
+- **[MySQL](https://www.mysql.com)**
+- **[Hibernate](https://hibernate.org)**
+- **[Flyway](https://flywaydb.org)**
+- **[Lombok](https://projectlombok.org)**
+
+## 📝 Licença
+
+Projeto desenvolvido em conjunto ao curso da alura [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
+
+Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira)
